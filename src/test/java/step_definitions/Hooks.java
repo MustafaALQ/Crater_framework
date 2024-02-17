@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import utils.DataReader;
 import utils.Driver;
 
 public class Hooks {
@@ -14,6 +15,7 @@ public class Hooks {
 	// before hook runs before every scenario. 
 		@Before
 		public void setup() {
+			
 			Driver.getDriver().manage().window().maximize();
 			Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		}

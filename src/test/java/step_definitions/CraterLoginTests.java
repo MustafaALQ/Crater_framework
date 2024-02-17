@@ -13,7 +13,7 @@ import utils.Driver;
 
 public class CraterLoginTests {
 	
-	CraterLoginPage elements = new CraterLoginPage();
+	CraterLoginPage login = new CraterLoginPage();
 	BrowserUtils utils = new BrowserUtils();
 	CraterDashboardPage dashbaord = new CraterDashboardPage();
 	
@@ -25,14 +25,14 @@ public class CraterLoginTests {
 
 	@When("user enters valid email and valid password")
 	public void user_enters_valid_email_and_valid_password() throws InterruptedException {
-		utils.waitForElementToBeVisible(elements.emailField);
-	    utils.sendkeysWithActionsClass(elements.emailField, DataReader.getProperty("crater_email"));
-	    elements.passwordField.sendKeys(DataReader.getProperty("crater_password"));
+		utils.waitForElementToBeVisible(login.emailField);
+	    utils.sendkeysWithActionsClass(login.emailField, DataReader.getProperty("crater_email"));
+	    login.passwordField.sendKeys(DataReader.getProperty("crater_password"));
 	}
 
 	@When("user clicks on the Login in button")
 	public void user_clicks_on_the_login_in_button() throws InterruptedException {
-	  elements.loginButton.click();
+		login.loginButton.click();
 	  
 	}
 
@@ -44,14 +44,14 @@ public class CraterLoginTests {
 	
 	
 	@When("user enters invalid {string} and {string}")
-	public void user_enters_invalid_and(String string, String string2) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void user_enters_invalid_and(String email, String password) {
+		utils.sendkeysWithActionsClass(login.emailField, password);
+		login.passwordField.sendKeys(password);
 	}
 	@Then("user should not be logged in")
 	public void user_should_not_be_logged_in() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    
 	}
 
 							

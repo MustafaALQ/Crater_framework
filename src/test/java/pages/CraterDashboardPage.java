@@ -14,9 +14,12 @@ public class CraterDashboardPage {
 	}
 	
 	
-	@FindBy(xpath="//a[@href=\"/admin/items\"]")
+	@FindBy(xpath="//*[text()=' Items']")
 	public WebElement itemsLink;
 	
 	@FindBy(xpath = "//h6[text()=\"Due Invoices\"]")
 	public WebElement dueInvoiceText;
+	
+	@FindBy(xpath ="//a[@href=\"/admin/customers\"]")
+	public WebElement customerLink;
 }

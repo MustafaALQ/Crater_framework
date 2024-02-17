@@ -56,7 +56,17 @@ public class CraterItemPage {
 	@FindBy(xpath = "//button[text()=\"Ok\"]")
 	public WebElement confirmDeleteBtn;
 	
+	@FindBy(xpath="//a[@href='/admin/items']")
+	public WebElement itemsLink;
 	
+	@FindBy(xpath= "//*[text()=\"Books\"]")
+	public WebElement itemBook;
+	
+	@FindBy(xpath ="//h3[text()=\"Edit Item\"]")
+	public WebElement editItemText;
+	
+	@FindBy(xpath = "//*[text()=\" Update Item\"]")
+	public WebElement updateItemBtn;
 	
 	
 }

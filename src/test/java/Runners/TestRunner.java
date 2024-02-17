@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
 				},
 		features="src/test/resources/features",
 		glue="step_definitions",
-		tags="@smoke"
+		tags="@test3"
 		)
 public class TestRunner {
 

@@ -16,7 +16,7 @@ import io.cucumber.junit.CucumberOptions;
 				},
 		features="src/test/resources/features",
 		glue="step_definitions",
-		tags="@smoke",
+		tags="@test2",
 		dryRun=true
 		)
 public class DryRunner {
